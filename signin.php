@@ -1,14 +1,3 @@
-<?php
-include("connection.php");
-
-session_start();
-
-if (!isset($_SESSION["user"])) {
-    header("Location:index.html");
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,23 +35,23 @@ if (!isset($_SESSION["user"])) {
               <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
               <li class="nav-item"><a href="K-Drama.html" class="nav-link">K-Drama</a></li>
               <li class="nav-item"><a href="K-Pop.html" class="nav-link">K-Pop</a></li>
-              <li class="nav-item"><a href="#" class="nav-link"><?php echo $_SESSION['user']; ?></a></li>
-              <li class="nav-item"><a href="logout.php" class="nav-link">Logout</a></li>
           </ul>
       </div>
      </div>
      </nav>
      <!-- END nav -->
 
-        <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_1.png');">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
-            <div class="col-md-7 ftco-animate">
-                <span class="subheading">Welcome to Ko-Blogz</span>
-                <h1 class="mb-4">Lift your day with your bias!</h1>
-            </div>
-
+<div class="hero-wrap js-fullheight" style="background-image: url('images/bg_1.png');">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
+      <div class="col-md-7 ftco-animate">
+        <span class="subheading">Welcome to Ko-Blogz</span>
+        <h1 class="mb-4">Lift your day with your bias!</h1>
+    </div>
+</div>
+</div>
+</div>
 
 <section class="ftco-section ftco-no-pb ftco-no-pt">
    <div class="container">
@@ -72,7 +61,7 @@ if (!isset($_SESSION["user"])) {
           <div class="login-wrap p-4 p-md-5">
               <h3 class="mb-4">Login Now</h3>
 
-              <form action="verify_register.php" class="signup-form" method="POST">
+              <form action="verify_login.php" class="signup-form" method="POST">
                 <div class="form-group">
                     <label class="label" for="email">Email Address</label>
                     <input type="text" class="form-control" placeholder="email juga tolong diisi.." name="email">
@@ -85,10 +74,16 @@ if (!isset($_SESSION["user"])) {
                  <button type="submit" class="btn btn-primary submit"><span class="fa fa-paper-plane"></span></button>
              </div>
          </form>
+         <p class="text-center">Register ? <a href="index.html">Sign Up</a></p>
      </div>
  </div>
-
+</div>
+</div>
 </section>
+
+
+
+<!-- loader -->
 <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 
